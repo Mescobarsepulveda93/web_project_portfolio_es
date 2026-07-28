@@ -200,3 +200,219 @@ html {
   height: auto;
   object-fit: contain;
 }
+
+.projects {
+  padding: 0 120px 80px;
+}
+
+.projects__title {
+  margin: 0 0 32px;
+  font-family: "Archivo Black", Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.project {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #1c1c1c;
+}
+
+.project__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.project__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 55%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  pointer-events: none;
+}
+
+.project__tech {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.project__tech-logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.project__info {
+  min-height: 340px;
+  padding: 30px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.project__title {
+  margin: 0 0 24px;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.375;
+}
+
+.project__description {
+  margin: 0;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.39;
+}
+
+.project__links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.project__link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.project__link:hover,
+.project__link:focus-visible {
+  opacity: 0.7;
+}
+
+.project__icon {
+  display: block;
+  width: auto;
+  height: 22px;
+  object-fit: contain;
+}
+/* -------------------- Pie de página -------------------- */
+
+.footer {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 120px 100px;
+  overflow: hidden;
+}
+
+.footer__background {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at calc(50% + 80px) 70%,
+      rgba(109, 109, 255, 0.35),
+      transparent 280px
+    ),
+    radial-gradient(
+      circle at calc(50% - 120px) 100%,
+      rgba(88, 196, 220, 0.16),
+      transparent 260px
+    );
+  pointer-events: none;
+}
+
+.footer__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer__title {
+  margin: 0 0 20px;
+  font-family: "Archivo Black", Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.footer__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__item {
+  margin: 0;
+}
+
+.footer__contact {
+  color: #6d6dff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.footer__contact:hover,
+.footer__contact:focus-visible {
+  opacity: 0.5;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 30px;
+}
+
+.footer__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footer__link:hover,
+.footer__link:focus-visible {
+  opacity: 0.5;
+  transform: translateY(-2px);
+}
+
+.footer__icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
