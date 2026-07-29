@@ -52,12 +52,52 @@ html {
 }
 
 .page {
+  position: relative;
+  isolation: isolate;
   min-width: 320px;
   margin: 0;
+  overflow-x: hidden;
   background-color: #111111;
   color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 400;
+}
+.page::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(100% - 540px);
+  width: 1280px;
+  height: 760px;
+  transform: translateX(-50%);
+  z-index: 0;
+  background:
+    radial-gradient(
+      ellipse 430px 270px at calc(50% - 170px) 56%,
+      rgba(88, 196, 220, 0.1) 0%,
+      rgba(88, 196, 220, 0.05) 38%,
+      rgba(88, 196, 220, 0) 72%
+    ),
+    radial-gradient(
+      ellipse 590px 340px at calc(50% + 20px) 48%,
+      rgba(109, 109, 255, 0.28) 0%,
+      rgba(109, 109, 255, 0.18) 34%,
+      rgba(109, 109, 255, 0.08) 58%,
+      rgba(109, 109, 255, 0) 80%
+    ),
+    radial-gradient(
+      ellipse 820px 420px at 50% 58%,
+      rgba(38, 77, 228, 0.07) 0%,
+      rgba(38, 77, 228, 0.03) 45%,
+      rgba(38, 77, 228, 0) 82%
+    );
+  pointer-events: none;
+}
+.header,
+.content,
+.footer {
+  position: relative;
+  z-index: 1;
 }
 
 /* -------------------- Encabezado -------------------- */
@@ -105,7 +145,7 @@ html {
   color: rgba(255, 255, 255, 0.5);
   font-size: 18px;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.39;
 }
 
 .header__divider {
@@ -123,7 +163,7 @@ html {
   color: #ffffff;
   font-size: 18px;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.39;
 }
 
 /* -------------------- Navegación del encabezado -------------------- */
@@ -202,7 +242,7 @@ html {
 }
 
 .projects {
-  padding: 0 120px 80px;
+  padding: 0 120px 20px;
 }
 
 .projects__title {
@@ -321,34 +361,23 @@ html {
 /* -------------------- Pie de página -------------------- */
 
 .footer {
-  position: relative;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 120px 100px;
-  overflow: hidden;
+  padding: 0 120px 60px;
 }
 
 .footer__background {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(
-      circle at calc(50% + 80px) 70%,
-      rgba(109, 109, 255, 0.35),
-      transparent 280px
-    ),
-    radial-gradient(
-      circle at calc(50% - 120px) 100%,
-      rgba(88, 196, 220, 0.16),
-      transparent 260px
-    );
-  pointer-events: none;
+  display: none;
 }
 
 .footer__content {
   position: relative;
   z-index: 1;
+  width: 300px;
+  min-height: 300px;
+  margin: 0 auto;
+  padding-top: 65px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -356,7 +385,7 @@ html {
 }
 
 .footer__title {
-  margin: 0 0 20px;
+  margin: 0 0 16px;
   font-family: "Archivo Black", Arial, sans-serif;
   font-size: 40px;
   font-weight: 400;
@@ -375,7 +404,7 @@ html {
 
 .footer__contact {
   color: #6d6dff;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
   text-decoration: none;
@@ -391,8 +420,8 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 80px;
-  margin-top: 30px;
+  gap: 48px;
+  margin-top: 24px;
 }
 
 .footer__link {
