@@ -445,3 +445,99 @@ html {
   height: 24px;
   object-fit: contain;
 }
+
+/* -------------------- Tableta -------------------- */
+
+@media screen and (max-width: 1023px) {
+  /* -------------------- Encabezado tablet -------------------- */
+
+  .header {
+    padding: 40px 40px 80px;
+    gap: 20px;
+  }
+
+  .header__information {
+    flex: 1;
+    min-width: 0;
+    min-height: 542px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__title {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 14px;
+    font-size: 58px;
+    line-height: 1;
+  }
+
+  .header__subtitle {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.39;
+  }
+
+  .header__description {
+    max-width: none;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 1.39;
+  }
+
+  .nav {
+    margin-top: auto;
+  }
+
+  .nav__links {
+    gap: 30px;
+  }
+
+  .header__image {
+    width: 216px;
+    height: 280px;
+  }
+
+  /* -------------------- Habilidades tablet -------------------- */
+
+  .skills {
+    padding: 0 40px 80px;
+  }
+
+  .skills__title {
+    margin-bottom: 40px;
+  }
+
+  /* -------------------- Proyectos tablet -------------------- */
+
+  .projects {
+    padding: 0 40px 20px;
+  }
+
+  .projects__title {
+    margin-bottom: 40px;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project__info {
+    min-height: 0;
+    padding: 30px;
+  }
+
+  .project__links {
+    margin-top: 24px;
+  }
+
+  /* -------------------- Footer tablet -------------------- */
+
+  .footer {
+    padding-right: 40px;
+    padding-bottom: 60px;
+    padding-left: 40px;
+  }
+}
