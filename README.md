@@ -19,4 +19,4 @@ profesional, habilidades, herramientas y proyectos de desarrollo web.
 
 ## GitHub Pages
 
-[Ver el proyecto publicado](AQUÍ-VA-EL-ENLACE)
+[Ver el proyecto publicado](https://mescobarsepulveda93.github.io/web_project_portfolio_es/)
